@@ -74,3 +74,7 @@ If you dont already have numpy and scipy installed, it is best to download
 Dependencies can be installed by::
 
     pip install -r requirements.txt
+
+License
+============
+combine_pvalues is freely available under the MIT license.
