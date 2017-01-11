@@ -3,20 +3,16 @@ Function to combine p-values with Hartung's method, the Truncated Product Method
 QuickStart
 ==========
 ::
+
 	combine_pvalues.combine_pvalues(pvalues, method="fisher", tau=0.05)
-
 	pvalues: list of floats
-
 	method: "fisher", "Hartung", or "tpm"
-
 	    "fisher": fisher's method for independent pvalues (Statistical
 	            Methods for Research Workers 1932)
 	       returns: pvalue
-	   
 	    "tpm": Truncated Product Method for independent pvalues (Zaykin,
 	         Genet Epidemiol. 2002)
 	       returns: pvalue
-	   
 	    "Hartung": Hartung's method for dependent pvalues (Hartung,
 	             Biometrical Journal 1999)
 	       returns: {"alternative": string describing the alternative
@@ -31,20 +27,14 @@ QuickStart
 	                 "parameter": the number of combined tests (p-values)
 	                 "pvalue": the combined test p-value
 	                 "statistic": the Ht test statistic}
-				 
 	tau: (used for tpm) between 0 and 1
-
 	seed: (used for tpm) random number generator seed
-
 	nperms: (used for tpm) number of permutations to do
-
 	weights: (used in Hartung) list of weights. It must be of the same
 	         length of p.
-		 
 	kappa: (used in Hartung) adjustment parameter. It is a positive 
 	       value (0.2 is the default value), then it is computed as
 	       in Hartung, p. 853.
-	   
 	alpha: (used in Hartung) level for the 1-alpha confidence interval
 	       for rho (0.10 is the default).
 
